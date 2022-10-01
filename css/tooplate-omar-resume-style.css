@@ -107,6 +107,9 @@ https://www.tooplate.com/view/2120-ben-resume
     line-height: 2em;
   }
 
+  .section {
+    height: 100vh; 
+  }
   .section-padding {
     padding: 6rem 0;
   }
