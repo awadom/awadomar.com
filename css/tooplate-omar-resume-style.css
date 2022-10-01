@@ -107,9 +107,14 @@ https://www.tooplate.com/view/2120-ben-resume
     line-height: 2em;
   }
 
-  .section {
-    height: 100vh; 
+  .introsection {
+    height: 100vh;
   }
+  .fillscreen { 
+    min-height: 100%;
+    height: 100%;
+}
+
   .section-padding {
     padding: 6rem 0;
   }
@@ -145,7 +150,16 @@ https://www.tooplate.com/view/2120-ben-resume
   /*---------------------------------------
      GENERAL               
   -----------------------------------------*/
-
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
   * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -304,7 +318,13 @@ https://www.tooplate.com/view/2120-ben-resume
   /*---------------------------------------
      HERO                
   -----------------------------------------*/
-
+  .img-container {
+    max-height: 300px;
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    margin: 5px;
+  }
   .hero-title,
   .email-link {
     background: var(--dark-color);
