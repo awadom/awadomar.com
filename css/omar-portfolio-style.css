@@ -8,7 +8,7 @@ https://www.tooplate.com/view/2120-ben-resume
 
   @font-face {
       font-family: 'Plain';
-      src: url('../localfonts/Plain-Regular.woff2') format('woff2'),
+      src: url('../localfonts/Times-Regular.woff2') format('woff2'),
           url('../localfonts/Plain-Regular.woff') format('woff');
       font-weight: normal;
       font-style: normal;
@@ -33,7 +33,7 @@ https://www.tooplate.com/view/2120-ben-resume
   :root {
     --primary-color:        #ffd500;
     --white-color:          #ffffff;
-    --dark-color:           #010101;
+    --dark-color:           #535353;
     --menu-bg-color:        #212529;
 
     --gray-color:           #909090;
@@ -322,6 +322,16 @@ https://www.tooplate.com/view/2120-ben-resume
     height: auto;
     margin: 5px;
   }
+  .circle-shadow {
+    background: blue;
+    height: auto;
+    width: auto;
+    border-radius: 300px;
+    margin: 10px;
+    -webkit-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 1);
+    box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 1);
+}
   .hero-title,
   .email-link {
     background: var(--dark-color);
@@ -332,7 +342,10 @@ https://www.tooplate.com/view/2120-ben-resume
     padding: 0.5rem 2rem 1.5rem 2rem;
 	font-size: 2.2em;
   }
-
+  .hero-title:hover{
+    background: var(--primary-color);
+    color: var(--dark-color);
+  }
   .email-link {
     background: var(--primary-color);
     color: var(--dark-color);
@@ -344,7 +357,9 @@ https://www.tooplate.com/view/2120-ben-resume
     background: var(--dark-color);
     color: var(--white-color);
   }
-
+.section-margin{
+  margin: 4em;
+}
 
   /*---------------------------------------
      ABOUT                
