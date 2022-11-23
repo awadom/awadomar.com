@@ -340,7 +340,10 @@
   /*---------------------------------------
      ABOUT                
   -----------------------------------------*/
-  
+  .about{
+    background: #f9f9f9;
+  }
+
   .about-third {
 	  margin: 2.2em -0.8em;
   }
@@ -363,7 +366,9 @@
   /*---------------------------------------
      FAQ                 
   -----------------------------------------*/
-
+  .faq{
+    background: #f9f9f9;
+  }
   .faq .card-header {
     padding: 0;
   }
@@ -399,7 +404,7 @@
   -----------------------------------------*/
 
   .testimonials {
-    background: #f9f9f9;
+    background: #ffffff;
   }
 
   .testimonials-image {
@@ -686,5 +691,9 @@ font-size: 30px;
     .email-link {
       font-size: 20px;
       padding: 0.3rem 2rem 0.6rem 2rem;
+    }
+
+    .mwidth{
+      width: 100vw;
     }
   }
