@@ -787,6 +787,9 @@
     h1 {
       font-size: 2em;
     }
+    .navbar-brand{
+      font-size: 2em;
+    }
     .hero-title {
       font-size: 26px;
     }
