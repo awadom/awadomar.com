@@ -564,12 +564,9 @@
      RESPONSIVE STYLES              
   -----------------------------------------*/
   @media screen and (max-width: 2000px) {
-    .section-margin {
-      margin-left: 65px;
-      margin-right: 110px;
-    }
+
     .hero-p-text {
-    font-size: 21px;
+    font-size: 1.5em;
     color: var(--p-color);
     font-style: light;
     letter-spacing: 0em;
@@ -594,42 +591,21 @@
     .email-link {
       font-size: 28px;
     }
-  }
-
-  @media screen and (max-width: 992px) {
-
-    .hero-title {
-      font-size: 1.8em;
-      padding-bottom: 1rem;
-    }
-
-    .email-link {
-      font-size: 22px;
-      padding: 0.5rem 2rem 0.7rem 2rem;
+    .mwidth{
+      width: 100vw;
     }
   }
+  @media screen and (max-width: 1600px) {
 
-  @media screen and (max-width: 991px) {
-   
-    .navbar-nav {
-      margin: 1rem 0;
+    .hero-p-text {
+    font-size: 1.5em;
+    color: var(--p-color);
+    font-style: light;
+    letter-spacing: 0em;
+    line-height: 1.5em;
     }
-
-    .navbar-expand-lg .navbar-nav .nav-link {
-      display: inline-block;
-      margin: 5px 0.5rem;
-    }
-  }
-
-  @media screen and (max-width: 1200px) {
-    .section-margin {
-      margin: 10px;
-    }
-.hero-p-text {
-font-size: 30px;
-}
     h1 {
-        font-size: 42px;
+        font-size: 52px;
     }
 
     h2 {
@@ -647,31 +623,129 @@ font-size: 30px;
     .email-link {
       font-size: 28px;
     }
+    .mwidth{
+      width: 100vw;
+    }
   }
+  @media screen and (max-width: 1382px) {
 
-  @media screen and (max-width: 992px) {
+    .hero-p-text {
+    font-size: 1.5em;
+    color: var(--p-color);
+    font-style: light;
+    letter-spacing: 0em;
+    line-height: 1.5em;
+    }
+    h1 {
+        font-size: 52px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    .email-link {
+      font-size: 28px;
+    }
+    .mwidth{
+      width: 100vw;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+
+    .hero-p-text {
+    font-size: 1.5em;
+    color: var(--p-color);
+    font-style: light;
+    letter-spacing: 0em;
+    line-height: 1.5em;
+    }
+    h1 {
+        font-size: 52px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    .email-link {
+      font-size: 28px;
+    }
+    .mwidth{
+      width: 100vw;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+
+    .hero-p-text {
+    font-size: 1.5em;
+    color: var(--p-color);
+    font-style: light;
+    letter-spacing: 0em;
+    line-height: 1.5em;
+    }
+    h1 {
+        font-size: 52px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    .email-link {
+      font-size: 28px;
+    }
+    .mwidth{
+      width: 100vw;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
 
     .hero-title {
       font-size: 1.8em;
       padding-bottom: 1rem;
     }
-
+    .hero-p-text {
+      font-size: 1.5em;
+      color: var(--p-color);
+      font-style: light;
+      letter-spacing: 0em;
+      line-height: 1.5em;
+      }
     .email-link {
       font-size: 22px;
       padding: 0.5rem 2rem 0.7rem 2rem;
     }
-  }
 
-  @media screen and (max-width: 991px) {
-   
-    .navbar-nav {
-      margin: 1rem 0;
+    .mwidth{
+      width: 100vw;
     }
 
-    .navbar-expand-lg .navbar-nav .nav-link {
-      display: inline-block;
-      margin: 5px 0.5rem;
-    }
   }
 
   @media screen and (max-width: 768px) {
@@ -680,15 +754,94 @@ font-size: 30px;
       position: relative;
       top: 1.5rem;
     }
+    .hero-p-text {
+      font-size: 1em;
+      color: var(--p-color);
+      font-style: light;
+      letter-spacing: 0em;
+      line-height: 1.5em;
+      }
+    .mwidth{
+      width: 100vw;
+    }
   }
 
+  @media screen and (max-width: 600px) {
+
+    .hero-text {
+      position: relative;
+      top: 1.5rem;
+    }
+    .hero-p-text {
+      font-size: 1em;
+      color: var(--p-color);
+      font-style: light;
+      letter-spacing: 0em;
+      line-height: 1.5em;
+      }
+    .mwidth{
+      width: 100vw;
+    }
+  }
   @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 2em;
+    }
+    .hero-title {
+      font-size: 26px;
+    }
+    .hero-p-text {
+      font-size: .8em;
+      color: var(--p-color);
+      font-style: light;
+      letter-spacing: 0em;
+      line-height: 1.5em;
+      }
+    .email-link {
+      font-size: 20px;
+      padding: 0.3rem 2rem 0.6rem 2rem;
+    }
+.section-margin{
+  margin: 1em;
+}
+    .mwidth{
+      width: 100vw;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    h1 {
+      font-size: 2em;
+    }
+    .hero-title {
+      font-size: 26px;
+    }
+    .hero-p-text {
+      font-size: .6em;
+      color: var(--p-color);
+      font-style: light;
+      letter-spacing: 0em;
+      line-height: 1.5em;
+      }
+    .email-link {
+      font-size: 20px;
+      padding: 0.3rem 2rem 0.6rem 2rem;
+    }
+    .section-margin{
+      margin: 1em;
+    }
+    .mwidth{
+      width: 100vw;
+    }
+  }
+
+  @media screen and (max-width: 190px) {
 
     .hero-title {
       font-size: 26px;
     }
     .hero-p-text {
-      font-size: 17px;
+      font-size: 1.5em;
       color: var(--p-color);
       font-style: light;
       letter-spacing: 0em;
