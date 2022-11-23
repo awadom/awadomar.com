@@ -102,7 +102,7 @@
     
     color: var(--white-color);
     letter-spacing: 0.2px;
-    padding: 12px 80px 12px 80px;
+    padding: 12px 40px 12px 40px;
     font-size: var(--button-font-size);
     font-weight: var(--font-weight-bold);
     white-space: nowrap;
@@ -569,7 +569,7 @@
       margin-right: 110px;
     }
     .hero-p-text {
-    font-size: 17px;
+    font-size: 21px;
     color: var(--p-color);
     font-style: light;
     letter-spacing: 0em;
@@ -687,7 +687,13 @@ font-size: 30px;
     .hero-title {
       font-size: 26px;
     }
-
+    .hero-p-text {
+      font-size: 17px;
+      color: var(--p-color);
+      font-style: light;
+      letter-spacing: 0em;
+      line-height: 1.5em;
+      }
     .email-link {
       font-size: 20px;
       padding: 0.3rem 2rem 0.6rem 2rem;
