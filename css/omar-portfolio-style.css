@@ -33,6 +33,12 @@
     font-family: var(--base-font-family);
   }
 
+  .space-around {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+
 
   /*---------------------------------------
      TYPOGRAPHY              
@@ -586,6 +592,9 @@
 
     h4 {
         font-size: 28px;
+    }
+    p{
+      font-size: 1em;
     }
 
     .email-link {
