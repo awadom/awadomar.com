@@ -90,8 +90,12 @@ p {
   padding: 6rem 0;
 }
 
-.bottom-padding {
+.bottom-margin {
   margin-bottom: 2em;
+}
+
+.top-margin {
+  margin-top: 2em;
 }
 
 .custom-icon {
