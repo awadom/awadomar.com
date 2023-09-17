@@ -31,7 +31,7 @@
         position: relative;
         padding-top: 56.25%; /* 16:9 Aspect Ratio (adjust as needed) */
         height: 80vh; /* Set the height to 100% of the viewport height */
-
+        width: 100vw;
     }
 
     .iframe-container iframe {
@@ -43,7 +43,7 @@
         border: 0;
     }
 </style>
-<body class="">
+<body class="no-y-overflow no-x-overflow">
     <div class="container">
         <div class="justify-content-center">
             <a href="index.html#about" class="btn btn-primary mt-3">Back</a>
@@ -51,11 +51,11 @@
                 <h1 class="mt-3">Supply Chain Analysis</h1>
                 <p>Correlation Matrix, Histogram of Prices, and Bar Chart of Categories. Using pandas, matplotlib, and seaborn.</p>
                 <!-- Embed the HTML content of your notebook here within an iframe container -->
-                <div class="iframe-container">
-                    <iframe src="notebooks/supplychain.html" frameborder="0" allowfullscreen></iframe>
-                </div>
             </div>
         </div>
+    </div>
+    <div class="iframe-container">
+        <iframe src="notebooks/supplychain.html" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <!-- Add Bootstrap JS scripts at the end of the body for better performance -->
