@@ -145,6 +145,9 @@ p {
 .top-buffer {
   margin-top: 40px;
 }
+.bottom-buffer {
+  margin-bottom: 40px;
+}
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
