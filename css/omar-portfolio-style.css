@@ -300,11 +300,12 @@
   .img-container {
     max-height: 250px;
     max-width: 250px;
-    width: auto;
-    height: auto;
+    height: 250px;
+    width: 250px;
     margin: 5px;
+    object-fit: cover;
   }
-  .circle-shadow {
+  /* .circle-shadow {
     background: blue;
     height: auto;
     width: auto;
@@ -313,7 +314,7 @@
     -webkit-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 1);
     -moz-box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 1);
     box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 1);
-}
+} */
   .hero-title,
   .email-link {
     background: var(--dark-color);
