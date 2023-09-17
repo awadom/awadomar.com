@@ -438,9 +438,9 @@ a:hover {
   width: 100%;
 }
 
-.recommendations .owl-theme .owl-nav.disabled + .owl-dots {
+/* .recommendations .owl-theme .owl-nav.disabled + .owl-dots {
   margin-top: 2rem;
-}
+} */
 
 .recommendations .owl-theme .owl-dots .owl-dot {
   outline: none;
