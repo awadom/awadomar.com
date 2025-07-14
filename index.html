@@ -71,7 +71,7 @@
                 </ul>
 
                 <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                    <a href="https://drive.google.com/file/d/1rd5B0fGkWNpceL3Vh6bW-eC4DiAspPyc/view?usp=sharing" target="_blank" class="custom-btn btn" download>Download CV</a>
+                    <a href="#" class="custom-btn btn" data-toggle="modal" data-target="#resumeModal">View Resume</a>
                 </div>
             </div>
 
@@ -107,9 +107,11 @@
                    <div class="d-flex flex-column bg-dark justify-content-center align-items-center col-lg-6 col-12">
                         <div class="hero-text section-margin">
                           <h1 class="text-white">About Omar</h1>
-                          <p class="text-white hero-p-text">Omar loves a technical challenge, especially when he innovates a solution, combining his skillsets of data science, program management, and start up development into an applied science approach. Helping others discover the benefits of technology, Omar is a data-driven team player. He strives to advance his knowledge in both technology and business, gaining certifications and experience in Program Management, Power Platform (Fabric, Power BI, Power Automate, Power Apps, and Sharepoint), SQL, Python, Spark. <br><br></p>
+                          <p class="text-white hero-p-text">I’m a data-driven leader with over 10 years of experience turning complex problems into scalable solutions. From leading analytics at Microsoft to launching startups, I specialize in building high-impact teams, systems, and insights that drive real business outcomes.
+
+Outside of work, I’m a curious tinkerer, new dad, and lifelong learner who believes great ideas start with good questions—and strong coffee. <br><br></p>
                           <div class="text-center bottom-buffer">
-                            <a href ="https://drive.google.com/file/d/1rd5B0fGkWNpceL3Vh6bW-eC4DiAspPyc/view?usp=sharing" target="_blank" class="custom-btn">Resume</a>
+                            <a href="#" class="custom-btn" data-toggle="modal" data-target="#resumeModal">Resume</a>
                             <a href="#about" class="custom-btn">Portfolio</a>
                           </div>
                         </div>
@@ -227,10 +229,13 @@
 
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                           <div class="card-body">
-                            <p>With fifteen years of data science and analytics experience, I engineer impactful reports and drive the evolution of data-driven platforms within Microsoft's supply chain. I have a strong command of SQL, Python, and Spark, enabling me to extract meaningful insights from complex datasets and leverage scripting skills for process automation. I also utilize the Power Platform and Azure Data Factory to create intuitive visualizations, manage data pipelines, and orchestrate efficient workflows.
+                            <p>With over fifteen years in data science and analytics, I lead the design and delivery of scalable data platforms that power decision-making across Microsoft’s global supply chain. My focus is on aligning data strategy with business outcomes—integrating advanced analytics, automation, and intuitive reporting to drive efficiency, agility, and growth.
                             </p>
 
-                            <p>As a senior business intelligence analyst, I enjoy tackling complex data challenges, delivering actionable solutions, and embracing new opportunities for collaboration. I have a proven ability to quickly adapt, learn new programming languages, frameworks, and tools, ensuring I stay at the forefront of the field. My mission is to empower data-driven decision making and innovation at Microsoft and beyond. Feel free to reach out to me with questions, ideas, or recipes!
+                            <p>I bring deep expertise in SQL, Python, Spark, and the Power Platform, with a strong track record of operationalizing insights through end-to-end pipeline management and executive-ready visualizations. I’m passionate about building high-performing teams, fostering cross-functional collaboration, and championing a culture of data-driven innovation.
+                            </p>
+                            <p>
+                              Whether shaping strategic roadmaps or solving hands-on technical challenges, my mission is to turn complexity into clarity—and create lasting business impact. Always open to connecting on ideas, challenges, or the occasional recipe.
                             </p>
                           </div>
                         </div>
@@ -252,7 +257,10 @@
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                           <div class="card-body">
-                            <p>I would describe myself as a data-driven individual, always seeking opportunities to leverage data for the betterment of others. Over the last couple of years, I've successfully integrated my passion for data with my desire to assist people. During weekends, I derive immense joy from embarking on hiking adventures and discovering fresh natural settings, allowing me to savor the outdoors while indulging in my love for reading.</p>
+                            <p>At my core, I believe data is a tool for empathy. I’m driven by the idea that behind every dataset is a real person, a decision to be made, or a problem worth solving. My "why" is simple: to use data to make systems more human, decisions more thoughtful, and outcomes more equitable.</p>
+                          <p>
+                            Over the past few years, I’ve worked to align my technical skills with that purpose—building solutions that not only perform, but truly help. Outside of work, I turn to nature and books to stay grounded, curious, and inspired to keep asking better questions.
+                          </p>
                           </div>
                         </div>
                       </div>
@@ -336,6 +344,29 @@
     </section>
 <!-- COPYRIGHT -->
      <p class="copyright-text mt-5 pt-3 align-items-center text-center">Copyright &copy; 2023 Omar Awad</p>
+
+<!-- RESUME MODAL -->
+<div class="modal fade" id="resumeModal" tabindex="-1" role="dialog" aria-labelledby="resumeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resumeModalLabel">Omar's Resume</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-0">
+        <embed src="documents/Omar_s_Resume_2025.pdf" type="application/pdf" width="100%" height="600px" />
+        <div class="text-center p-3">
+          <a href="documents/Omar_s_Resume_2025.pdf" download="Omar_Awad_Resume_2025.pdf" class="btn btn-primary">
+            <i class="fas fa-download"></i> Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- SCRIPTS -->
      <script src="js/jquery.min.js"></script>
      <script src="js/bootstrap.min.js"></script>

@@ -877,3 +877,43 @@ a:hover {
     width: 100vw;
   }
 }
+
+/* Resume Modal Styles */
+.modal-xl {
+  max-width: 90%;
+}
+
+#resumeModal .modal-content {
+  border-radius: var(--border-radius-xsmall);
+}
+
+#resumeModal .modal-header {
+  background-color: var(--menu-bg-color);
+  color: var(--white-color);
+  border-bottom: none;
+}
+
+#resumeModal .modal-header .close {
+  color: var(--white-color);
+  opacity: 1;
+  text-shadow: none;
+}
+
+#resumeModal .modal-header .close:hover {
+  color: var(--primary-color);
+}
+
+#resumeModal embed {
+  min-height: 600px;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-xl {
+    max-width: 95%;
+  }
+  
+  #resumeModal embed {
+    min-height: 400px;
+  }
+}
