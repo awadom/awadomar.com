@@ -22,7 +22,10 @@
      <link rel="stylesheet" href="css/all.min.css">
      <link rel="stylesheet" href="css/owl.carousel.min.css">
      <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
+     
+     <!-- AOS Animation Library -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/omar-portfolio-style.css">
 
@@ -31,6 +34,13 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- SCROLL INDICATOR -->
+    <div class="scroll-indicator"></div>
 
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg">
@@ -71,7 +81,7 @@
                 </ul>
 
                 <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                    <a href="#" class="custom-btn btn" data-toggle="modal" data-target="#resumeModal">View Resume</a>
+                    <a href="#" class="custom-btn btn-primary" data-toggle="modal" data-target="#resumeModal">View Resume</a>
                 </div>
             </div>
 
@@ -81,38 +91,62 @@
 
     <!-- HERO -->
     <section class="d-flex flex-column" id="intro">
+        <!-- Animated background particles -->
+        <div class="particles-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
 
          <div class="container-fluid ">
             <div class="row min-vh-100 ">
-                  <div class="d-flex flex-column mwidth justify-content-center align-items-center col-lg-6 col-12 top-margin">
-                      <img src="images/Omar.png" class="img-container img-fluid rounded-circle" alt="Omar Portfolio">
+                  <div class="d-flex flex-column mwidth justify-content-center align-items-center col-lg-6 col-12 top-margin hero-left" data-aos="fade-right" data-aos-duration="1000">
+                      <div class="profile-container">
+                          <img src="images/Omar.png" class="img-container img-fluid rounded-circle pulse-animation" alt="Omar Portfolio">
+                          <div class="profile-ring"></div>
+                      </div>
                       <div class = "row">
-                        <h4 class="font-weight-bold top-buffer">Omar Awad</h4>
+                        <h4 class="font-weight-bold top-buffer text-gradient">Omar Awad</h4>
                       </div>
                       <div class = "row text-center">
-                        <p>Business Intelligence Leader | Data Scientist</p>
+                        <p class="hero-subtitle">Business Intelligence Leader | Data Scientist</p>
                       </div>
                         <div class = "row text-center space-around bottom-margin">
                         <!-- Linkedin -->
-                        <H1><a href="https://www.linkedin.com/in/awadomar"><i class="fab fa-linkedin"></i></a></H1>
+                        <div class="social-icon-wrapper">
+                            <a href="https://www.linkedin.com/in/awadomar" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        </div>
                         <!-- Github -->
-                        <H1><a href="https://github.com/awadom"><i class="fab fa-github"></i></a></H1>
+                        <div class="social-icon-wrapper">
+                            <a href="https://github.com/awadom" class="social-icon"><i class="fab fa-github"></i></a>
+                        </div>
                         <!-- Twitter -->
-                        <h1><a href="https://x.com/DatarangOmar"><i class="bi bi-twitter-x"></i></a></h1>
+                        <div class="social-icon-wrapper">
+                            <a href="https://x.com/DatarangOmar" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                        </div>
                         <!-- Mail -->
-                        <H1><a href="mailto:hello@awadomar.com"><i class="bi bi-envelope"></i></a></H1>
+                        <div class="social-icon-wrapper">
+                            <a href="mailto:hello@awadomar.com" class="social-icon"><i class="bi bi-envelope"></i></a>
+                        </div>
                       </div>
                   </div>
 
-                   <div class="d-flex flex-column bg-dark justify-content-center align-items-center col-lg-6 col-12">
+                   <div class="d-flex flex-column bg-dark justify-content-center align-items-center col-lg-6 col-12 hero-right" data-aos="fade-left" data-aos-duration="1000">
                         <div class="hero-text section-margin">
-                          <h1 class="text-white">About Omar</h1>
+                          <h1 class="text-white hero-title">About Omar</h1>
                           <p class="text-white hero-p-text">I’m a data-driven leader with over 10 years of experience turning complex problems into scalable solutions. From leading analytics at Microsoft to launching startups, I specialize in building high-impact teams, systems, and insights that drive real business outcomes.
 
 Outside of work, I’m a curious tinkerer, new dad, and lifelong learner who believes great ideas start with good questions—and strong coffee. <br><br></p>
-                          <div class="text-center bottom-buffer">
-                            <a href="#" class="custom-btn" data-toggle="modal" data-target="#resumeModal">Resume</a>
-                            <a href="#about" class="custom-btn">Portfolio</a>
+                          <div class="text-center bottom-buffer hero-buttons">
+                            <a href="#" class="custom-btn btn-primary" data-toggle="modal" data-target="#resumeModal">Resume</a>
+                            <a href="#about" class="custom-btn btn-secondary">Portfolio</a>
                           </div>
                         </div>
                     </div>
@@ -123,29 +157,92 @@ Outside of work, I’m a curious tinkerer, new dad, and lifelong learner who bel
 
     <section class="about" id="about">
         <div class="container">
-            <div class="row d-flex ">
-                <div class="col-lg-6 col-md-6 col-12 min-vw-50">
-                    <h1 id = "portfolio" class="text-black top-buffer bottom-buffer">Portfolio</h1>
+            <div class="row d-flex">
+                <div class="col-lg-12 col-12">
+                    <h1 id="portfolio" class="text-black top-buffer bottom-buffer section-title" data-aos="fade-up">Portfolio</h1>
+                    <div class="row mb-5">
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4>Data Analytics</h4>
+                                <p>Advanced statistical analysis and predictive modeling</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h4>Python & SQL</h4>
+                                <p>Expert-level programming and database management</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Team Leadership</h4>
+                                <p>Building high-performing data teams and cultures</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h4>ML & AI</h4>
+                                <p>Machine learning and artificial intelligence solutions</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
-              <div class="col-lg-4 col-md-4 col-12 bottom-buffer">
-                <h3><a href="supplychaindemo.html">Supply Chain Jupyter Notebook</a></h3>
-                <p>Correlation Matrix, Histogram of Prices, and Bar Chart of Categories. Using pandas, matplotlib, and seaborn.</p>
-                <a href="supplychaindemo.html">
-                  <img src="images/correlation-matrix.png" alt="" style="max-width: 100%;">
-              </a>
-              
-            </div>
-            
-                <!-- <div class="col-lg-4 col-md-4 col-12">
-                <h3>Dashboard</h3>
-                <p>Cras et nisl vestibulum, accumsan elit sed, pretium enim. Vestibulum in condimentum magna. Maecenas quam magna, iaculis eu turpis et, commodo pulvinar leo.</p>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <img src="images/correlation-matrix.png" alt="Supply Chain Analysis" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Supply Chain Analytics</h3>
+                                <p>Interactive Jupyter notebook with correlation analysis, price distribution, and category insights using pandas, matplotlib, and seaborn.</p>
+                                <a href="supplychaindemo.html" class="btn btn-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                <h3>Code</h3>
-                <p>Duis at mollis leo, venenatis congue ex. Cras urna dui, gravida euismod lectus et, cursus tempor nulla. Praesent at turpis quis ex tristique gravida quis eget eros.</p>
-                </div> -->
+                
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <div class="placeholder-project">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Executive Dashboard</h3>
+                                <p>Real-time analytics dashboard built with Power BI, providing insights into supply chain performance and KPIs.</p>
+                                <a href="#" class="btn btn-primary">Coming Soon</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <div class="placeholder-project">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>ML Pipeline</h3>
+                                <p>Automated machine learning pipeline for demand forecasting using Python, Spark, and Azure ML.</p>
+                                <a href="#" class="btn btn-primary">Coming Soon</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -156,19 +253,20 @@ Outside of work, I’m a curious tinkerer, new dad, and lifelong learner who bel
           <div class="container">
                <div class="row">
                     <div class="col-12">
-                        <h1 class="text-black top-buffer bottom-buffer">Recommendations</h1>
+                        <h1 class="text-black top-buffer bottom-buffer section-title" data-aos="fade-up">Recommendations</h1>
 
-                        <div class="owl-carousel owl-theme" id="recommendations-carousel">
+                        <div class="owl-carousel owl-theme" id="recommendations-carousel" data-aos="fade-up" data-aos-delay="200">
                           <div class="item">
                             <div class="recommendations-thumb d-flex">
                                 <div class="d-flex align-items-start">
                                     <div class="recommendations-image">
                                         <img src="https://media.licdn.com/dms/image/D5603AQGSXBUn4UYCvg/profile-displayphoto-shrink_200_200/0/1702325597919?e=2147483647&v=beta&t=eg6kkuAgFq6puNekRa7AoJJZCGQdmyW_ekS2osDMEyQ" class="img-fluid" alt="recommendations image">
                                     </div>
-                                    <div class="recommendations-info ml-3 d-flex align-items-center" style="height: 100%;">
+                                    <div class="recommendations-info ml-3 d-flex align-items-start" style="height: 100%;">
                                         <div>
                                             <h6 class="mb-0">Shawn DeWitt</h6>
                                             <span>Program Director</span>
+                                            <p class="mt-2 mb-0 small text-muted">An accomplished information security executive with over two decades of experience in building security teams, I bring a wealth of expertise in implementing security programs in SaaS, Healthcare, and large IT organizations.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -184,10 +282,11 @@ Outside of work, I’m a curious tinkerer, new dad, and lifelong learner who bel
                                   <div class="recommendations-image">
                                       <img src="https://media.licdn.com/dms/image/v2/D4E03AQHyZjQBJHGNeA/profile-displayphoto-shrink_200_200/B4EZXdkiklHUAc-/0/1743179098798?e=1758153600&v=beta&t=q9FeJ7PILHMWtwvF8QF3XeGntJEUCG8drSZQ6oNHqr8" class="img-fluid" alt="recommendations image">
                                   </div>
-                                  <div class="recommendations-info ml-3 d-flex align-items-center" style="height: 100%;">
+                                  <div class="recommendations-info ml-3 d-flex align-items-start" style="height: 100%;">
                                       <div>
                                           <h6 class="mb-0">Mara Hart</h6>
                                           <span>Software Engineer</span>
+                                          <p class="mt-2 mb-0 small text-muted">Mara Hart, a current Software Engineer at Microsoft an alumna from the University of Virginia's School of Engineering, studying Computer Science.</p>
                                       </div>
                                   </div>
                               </div>
@@ -207,7 +306,7 @@ Outside of work, I’m a curious tinkerer, new dad, and lifelong learner who bel
 
 
      <!-- FAQ -->
-     <section class="faq">
+     <section class="faq" id="faq">
         
         <div class="container">
             
@@ -215,9 +314,9 @@ Outside of work, I’m a curious tinkerer, new dad, and lifelong learner who bel
 
                 <div class="col-lg-12 col-12">
 
-                    <h1 class="text-black top-buffer bottom-buffer">Frequently Asked Questions</h1>
+                    <h1 class="text-black top-buffer bottom-buffer section-title" data-aos="fade-up">Frequently Asked Questions</h1>
 
-                    <div class="accordion" id="accordionExample">
+                    <div class="accordion" id="accordionExample" data-aos="fade-up" data-aos-delay="200">
                       <div class="card">
                         <div class="card-header" id="headingOne">
                           <h2 class="mb-0">
@@ -323,21 +422,74 @@ Outside of work, I’m a curious tinkerer, new dad, and lifelong learner who bel
      <section class="contact pt-0" id="contact">
       <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-12">
-                <h1 class="my-4 pt-4 pt-lg-0">Say hello</h1>
-                <p>
-                    <h4 href="mailto:hello@awadomar.com">
-                        hello@awadomar.com
-                    <i class="fas fa-arrow-right custom-icon"></i>
-                    </h4>
-                </p>
-                <ul class="social-links mt-2">
-                    <li><a href="https://github.com/awadom"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/awadomar" target="_blank" rel="noopener" class="fab fa-linkedin"></a></li>
-                    <li><a href="https://x.com/DatarangOmar"><i class="bi bi-twitter-x"></i></a></li>
-                    <li><a href="mailto:hello@awadomar.com"><i class="bi bi-envelope"></i></a></li>
-                    <!-- <li><a href="#" rel="noopener" class="fab fa-youtube"></a></li> -->
+            <div class="col-lg-6 col-md-8 col-12">
+                <h1 class="my-4 pt-4 pt-lg-0 section-title" data-aos="fade-up">Say hello</h1>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <p class="contact-intro">
+                        Ready to collaborate on your next data-driven project? Let's connect and explore how we can turn your data into actionable insights.
+                    </p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <h4 class="contact-email">
+                            <a href="mailto:hello@awadomar.com">hello@awadomar.com</a>
+                        </h4>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <h4 class="contact-phone">Available for consultation</h4>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <h4 class="contact-location">Seattle, WA</h4>
+                    </div>
+                </div>
+                <ul class="social-links mt-4" data-aos="fade-up" data-aos-delay="400">
+                    <li><a href="https://github.com/awadom" class="tooltip"><i class="fab fa-github"></i><span class="tooltiptext">GitHub</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/awadomar" target="_blank" rel="noopener" class="tooltip"><i class="fab fa-linkedin"></i><span class="tooltiptext">LinkedIn</span></a></li>
+                    <li><a href="https://x.com/DatarangOmar" class="tooltip"><i class="bi bi-twitter-x"></i><span class="tooltiptext">Twitter</span></a></li>
+                    <li><a href="mailto:hello@awadomar.com" class="tooltip"><i class="bi bi-envelope"></i><span class="tooltiptext">Email</span></a></li>
                 </ul>
+            </div>
+            <div class="col-lg-6 col-md-4 col-12 d-flex align-items-center justify-content-center">
+                <div class="contact-animation" data-aos="fade-left" data-aos-delay="600">
+                    <div class="tech-matrix">
+                        <div class="matrix-row">
+                            <i class="fas fa-chart-line"></i>
+                            <i class="fas fa-database"></i>
+                            <i class="fas fa-code"></i>
+                            <i class="fas fa-brain"></i>
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="matrix-row">
+                            <i class="fas fa-chart-bar"></i>
+                            <i class="fas fa-server"></i>
+                            <i class="fas fa-laptop-code"></i>
+                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="matrix-row">
+                            <i class="fas fa-analytics"></i>
+                            <i class="fas fa-sitemap"></i>
+                            <i class="fas fa-terminal"></i>
+                            <i class="fas fa-network-wired"></i>
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="matrix-row">
+                            <i class="fas fa-chart-pie"></i>
+                            <i class="fas fa-hdd"></i>
+                            <i class="fas fa-bug"></i>
+                            <i class="fas fa-project-diagram"></i>
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div class="matrix-row">
+                            <i class="fas fa-chart-area"></i>
+                            <i class="fas fa-table"></i>
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-layer-group"></i>
+                            <i class="fas fa-tools"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
       </div>
@@ -372,6 +524,7 @@ Outside of work, I’m a curious tinkerer, new dad, and lifelong learner who bel
      <script src="js/bootstrap.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/owl.carousel.min.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      <script src="js/custom.js"></script>
 
 </body>
