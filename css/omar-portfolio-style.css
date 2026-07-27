@@ -413,6 +413,7 @@ img {
   max-height: 190px;
   margin: 18px 0;
   overflow-y: auto;
+  overscroll-behavior-y: contain;
   scrollbar-color: #38404d transparent;
 }
 

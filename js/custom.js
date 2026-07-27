@@ -49,11 +49,23 @@
     if (chatForm) chatForm.querySelector("button").disabled = busy;
   };
 
+  const positionConversationTurn = (userMessage, assistantMessage) => {
+    if (!chatLog || !userMessage || !assistantMessage) return;
+
+    const turnHeight =
+      assistantMessage.offsetTop + assistantMessage.offsetHeight - userMessage.offsetTop;
+
+    chatLog.scrollTop =
+      turnHeight <= chatLog.clientHeight
+        ? userMessage.offsetTop
+        : assistantMessage.offsetTop;
+  };
+
   const submitQuestion = async (question) => {
     const cleanQuestion = question.trim();
     if (!cleanQuestion || !chatForm || !chatInput) return;
 
-    addMessage("user", cleanQuestion);
+    const userMessage = addMessage("user", cleanQuestion);
     conversation.push({ role: "user", text: cleanQuestion });
     chatInput.value = "";
     chatForm.classList.remove("has-value");
@@ -80,13 +92,14 @@
       conversation.push({ role: "assistant", text: answer });
       loadingMessage.querySelector("p").textContent = answer;
       loadingMessage.classList.remove("is-loading");
+      positionConversationTurn(userMessage, loadingMessage);
     } catch (error) {
       loadingMessage.querySelector("p").textContent = error.message;
       loadingMessage.classList.remove("is-loading");
+      positionConversationTurn(userMessage, loadingMessage);
     } finally {
       setChatBusy(false);
       chatInput.focus();
-      chatLog.scrollTop = chatLog.scrollHeight;
     }
   };
 
@@ -104,4 +117,17 @@
       if (!event.target.closest("a, button")) chatInput.focus();
     });
   }
+
+  chatLog?.addEventListener(
+    "wheel",
+    (event) => {
+      const atTop = chatLog.scrollTop <= 0;
+      const atBottom = Math.ceil(chatLog.scrollTop + chatLog.clientHeight) >= chatLog.scrollHeight;
+
+      if ((event.deltaY < 0 && atTop) || (event.deltaY > 0 && atBottom)) {
+        event.preventDefault();
+      }
+    },
+    { passive: false }
+  );
 })();
