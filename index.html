@@ -1,531 +1,313 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-
-     <title>Omar's Portfolio Site</title>
-
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="Omar Awad">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-     <!-- Include Bootstrap Icons CSS via CDN -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/all.min.css">
-     <link rel="stylesheet" href="css/owl.carousel.min.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-     
-     <!-- AOS Animation Library -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/omar-portfolio-style.css">
-
-     <!-- FAVICON -->
-     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Omar Awad — Builder, Data Leader, Founder</title>
+  <meta name="description" content="Omar Awad builds products and intelligent systems across mobile, healthcare, automation, quantitative finance, and local AI.">
+  <meta name="author" content="Omar Awad">
+  <meta property="og:title" content="Omar Awad — Builder, Data Leader, Founder">
+  <meta property="og:description" content="Shipped products, applied AI, and end-to-end systems built from idea to production.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://awadomar.com">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/omar-portfolio-style.css">
 </head>
+<body>
+  <div class="scroll-indicator" aria-hidden="true"></div>
 
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
-    <!-- PRELOADER -->
-    <div class="preloader">
-        <div class="loader"></div>
-    </div>
-    
-    <!-- SCROLL INDICATOR -->
-    <div class="scroll-indicator"></div>
-
-    <!-- MENU BAR -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-
-            <a class="navbar-brand" href="#about">
-                Omar Awad
-            </a>
-
-            <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-toggle="collapse" 
-            data-target="#navbarNav" 
-            aria-controls="navbarNav" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a href="#intro" class="nav-link smoothScroll">Introduction</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll">About Me</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#recommendations" class="nav-link smoothScroll">Recommendations</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                    <a href="#" class="custom-btn btn-primary" data-toggle="modal" data-target="#resumeModal">View Resume</a>
-                </div>
-            </div>
-
-        </div>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Omar Awad, home">
+      <span class="wordmark-dot"></span>
+      Omar Awad
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#systems">Systems</a>
+      <a href="#about">About</a>
     </nav>
+    <a class="header-cta" href="mailto:hello@awadomar.com">Let’s build something</a>
+  </header>
 
-
-    <!-- HERO -->
-    <section class="d-flex flex-column" id="intro">
-        <!-- Animated background particles -->
-        <div class="particles-container">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Builder · Data leader · Founder</p>
+        <h1>I turn ambitious ideas into <span>working systems.</span></h1>
+        <p class="hero-lede">
+          I build products from first principles: mobile apps, AI decision tools,
+          data platforms, automations, and local infrastructure that solve real problems.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore selected work</a>
+          <a class="button button-secondary" href="documents/Omar_s_Resume_2025.pdf" target="_blank" rel="noopener">View résumé</a>
         </div>
-
-         <div class="container-fluid ">
-            <div class="row min-vh-100 ">
-                  <div class="d-flex flex-column mwidth justify-content-center align-items-center col-lg-6 col-12 top-margin hero-left" data-aos="fade-right" data-aos-duration="1000">
-                      <div class="profile-container">
-                          <img src="images/Omar.png" class="img-container img-fluid rounded-circle pulse-animation" alt="Omar Portfolio">
-                          <div class="profile-ring"></div>
-                      </div>
-                      <div class = "row">
-                        <h4 class="font-weight-bold top-buffer text-gradient">Omar Awad</h4>
-                      </div>
-                      <div class = "row text-center">
-                        <p class="hero-subtitle">Business Intelligence Leader | Data Scientist</p>
-                      </div>
-                        <div class = "row text-center space-around bottom-margin">
-                        <!-- Linkedin -->
-                        <div class="social-icon-wrapper">
-                            <a href="https://www.linkedin.com/in/awadomar" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        </div>
-                        <!-- Github -->
-                        <div class="social-icon-wrapper">
-                            <a href="https://github.com/awadom" class="social-icon"><i class="fab fa-github"></i></a>
-                        </div>
-                        <!-- Twitter -->
-                        <div class="social-icon-wrapper">
-                            <a href="https://x.com/DatarangOmar" class="social-icon"><i class="bi bi-twitter-x"></i></a>
-                        </div>
-                        <!-- Mail -->
-                        <div class="social-icon-wrapper">
-                            <a href="mailto:hello@awadomar.com" class="social-icon"><i class="bi bi-envelope"></i></a>
-                        </div>
-                      </div>
-                  </div>
-
-                   <div class="d-flex flex-column bg-dark justify-content-center align-items-center col-lg-6 col-12 hero-right" data-aos="fade-left" data-aos-duration="1000">
-                        <div class="hero-text section-margin">
-                          <h1 class="text-white hero-title">About Omar</h1>
-                          <p class="text-white hero-p-text">I’m a data-driven leader with over 10 years of experience turning complex problems into scalable solutions. From leading analytics at Microsoft to launching startups, I specialize in building high-impact teams, systems, and insights that drive real business outcomes.
-
-Outside of work, I’m a curious tinkerer, new dad, and lifelong learner who believes great ideas start with good questions—and strong coffee. <br><br></p>
-                          <div class="text-center bottom-buffer hero-buttons">
-                            <a href="#" class="custom-btn btn-primary" data-toggle="modal" data-target="#resumeModal">Resume</a>
-                            <a href="#about" class="custom-btn btn-secondary">Portfolio</a>
-                          </div>
-                        </div>
-                    </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-lg-12 col-12">
-                    <h1 id="portfolio" class="text-black top-buffer bottom-buffer section-title" data-aos="fade-up">Portfolio</h1>
-                    <div class="row mb-5">
-                        <div class="col-lg-3 col-md-6 col-12 mb-4">
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <h4>Data Analytics</h4>
-                                <p>Advanced statistical analysis and predictive modeling</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12 mb-4">
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <h4>Python & SQL</h4>
-                                <p>Expert-level programming and database management</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12 mb-4">
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <h4>Team Leadership</h4>
-                                <p>Building high-performing data teams and cultures</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12 mb-4">
-                            <div class="skill-item">
-                                <div class="skill-icon">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                                <h4>ML & AI</h4>
-                                <p>Machine learning and artificial intelligence solutions</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-image">
-                        <img src="images/correlation-matrix.png" alt="Supply Chain Analysis" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h3>Supply Chain Analytics</h3>
-                                <p>Interactive Jupyter notebook with correlation analysis, price distribution, and category insights using pandas, matplotlib, and seaborn.</p>
-                                <a href="supplychaindemo.html" class="btn btn-primary">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="portfolio-image">
-                        <div class="placeholder-project">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h3>Executive Dashboard</h3>
-                                <p>Real-time analytics dashboard built with Power BI, providing insights into supply chain performance and KPIs.</p>
-                                <a href="#" class="btn btn-primary">Coming Soon</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="portfolio-image">
-                        <div class="placeholder-project">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h3>ML Pipeline</h3>
-                                <p>Automated machine learning pipeline for demand forecasting using Python, Spark, and Azure ML.</p>
-                                <a href="#" class="btn btn-primary">Coming Soon</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- RECOMMENDATION -->
-     <section class="recommendations d-flex justify-content-center align-items-center bottom-margin" id="recommendations">
-          <div class="container">
-               <div class="row">
-                    <div class="col-12">
-                        <h1 class="text-black top-buffer bottom-buffer section-title" data-aos="fade-up">Recommendations</h1>
-
-                        <div class="owl-carousel owl-theme" id="recommendations-carousel" data-aos="fade-up" data-aos-delay="200">
-                          <div class="item">
-                            <div class="recommendations-thumb d-flex">
-                                <div class="d-flex align-items-start">
-                                    <div class="recommendations-image">
-                                        <img src="https://media.licdn.com/dms/image/D5603AQGSXBUn4UYCvg/profile-displayphoto-shrink_200_200/0/1702325597919?e=2147483647&v=beta&t=eg6kkuAgFq6puNekRa7AoJJZCGQdmyW_ekS2osDMEyQ" class="img-fluid" alt="recommendations image">
-                                    </div>
-                                    <div class="recommendations-info ml-3 d-flex align-items-start" style="height: 100%;">
-                                        <div>
-                                            <h6 class="mb-0">Shawn DeWitt</h6>
-                                            <span>Program Director</span>
-                                            <p class="mt-2 mb-0 small text-muted">An accomplished information security executive with over two decades of experience in building security teams, I bring a wealth of expertise in implementing security programs in SaaS, Healthcare, and large IT organizations.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="recommendations-description">
-                                <p>Omar's experience with data analytics, reporting, dashboards, and data analysis is second-to-none. His ability to work with clients is what makes him really stand out. He really takes the time to understand the underlying objective, build a data and reporting approach, and then pick the right analytics tool to make it come alive. His analysis gets to the "so what" of the problem and helps drive actionable results. I cannot recommend Omar highly enough for business intelligence, analytics, and reporting.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="item">
-                          <div class="recommendations-thumb d-flex">
-                              <div class="d-flex align-items-start">
-                                  <div class="recommendations-image">
-                                      <img src="https://media.licdn.com/dms/image/v2/D4E03AQHyZjQBJHGNeA/profile-displayphoto-shrink_200_200/B4EZXdkiklHUAc-/0/1743179098798?e=1758153600&v=beta&t=q9FeJ7PILHMWtwvF8QF3XeGntJEUCG8drSZQ6oNHqr8" class="img-fluid" alt="recommendations image">
-                                  </div>
-                                  <div class="recommendations-info ml-3 d-flex align-items-start" style="height: 100%;">
-                                      <div>
-                                          <h6 class="mb-0">Mara Hart</h6>
-                                          <span>Software Engineer</span>
-                                          <p class="mt-2 mb-0 small text-muted">Mara Hart, a current Software Engineer at Microsoft an alumna from the University of Virginia's School of Engineering, studying Computer Science.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="recommendations-description">
-                              <p>Omar is an adaptive individual who's not afraid to take charge. Omar is indispensable as a leader and a team member. Not only did he quickly climb to Program Director in an overseas company that had a culture and language very different from his own, but he was the bridge between his team and the founders. He worked to find where the employees wanted to grow and fostered that dream for each individual, boosting company morale and performance. Without doubt, a great addition to any team.</p>
-                          </div>
-                      </div>
-                        
-                        </div>
-
-                    </div>
-
-               </div>
+        <div class="proof-row" aria-label="Career highlights">
+          <div>
+            <strong>15+ years</strong>
+            <span>Data, analytics & leadership</span>
           </div>
-     </section>
+          <div>
+            <strong>2 companies</strong>
+            <span>Products built and operated</span>
+          </div>
+          <div>
+            <strong>1 live app</strong>
+            <span>Shipped to the App Store</span>
+          </div>
+        </div>
+      </div>
 
-
-     <!-- FAQ -->
-     <section class="faq" id="faq">
-        
-        <div class="container">
-            
-            <div class="row">
-
-                <div class="col-lg-12 col-12">
-
-                    <h1 class="text-black top-buffer bottom-buffer section-title" data-aos="fade-up">Frequently Asked Questions</h1>
-
-                    <div class="accordion" id="accordionExample" data-aos="fade-up" data-aos-delay="200">
-                      <div class="card">
-                        <div class="card-header" id="headingOne">
-                          <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              My story
-                            </button>
-                          </h2>
-                        </div>
-
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <p>With over fifteen years in data science and analytics, I lead the design and delivery of scalable data platforms that power decision-making across Microsoft’s global supply chain. My focus is on aligning data strategy with business outcomes—integrating advanced analytics, automation, and intuitive reporting to drive efficiency, agility, and growth.
-                            </p>
-
-                            <p>I bring deep expertise in SQL, Python, Spark, and the Power Platform, with a strong track record of operationalizing insights through end-to-end pipeline management and executive-ready visualizations. I’m passionate about building high-performing teams, fostering cross-functional collaboration, and championing a culture of data-driven innovation.
-                            </p>
-                            <p>
-                              Whether shaping strategic roadmaps or solving hands-on technical challenges, my mission is to turn complexity into clarity—and create lasting business impact. Always open to connecting on ideas, challenges, or the occasional recipe.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card">
-                        <div class="card-header" id="headingTwo">
-                          <h2 class="mb-0">
-                            <button 
-                            class="btn btn-link collapsed" 
-                            type="button" 
-                            data-toggle="collapse" 
-                            data-target="#collapseTwo" 
-                            aria-expanded="false" 
-                            aria-controls="collapseTwo">
-                              My why
-                            </button>
-                          </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <p>At my core, I believe data is a tool for empathy. I’m driven by the idea that behind every dataset is a real person, a decision to be made, or a problem worth solving. My "why" is simple: to use data to make systems more human, decisions more thoughtful, and outcomes more equitable.</p>
-                          <p>
-                            Over the past few years, I’ve worked to align my technical skills with that purpose—building solutions that not only perform, but truly help. Outside of work, I turn to nature and books to stay grounded, curious, and inspired to keep asking better questions.
-                          </p>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div class="card">
-                        <div class="card-header" id="headingThree">
-                          <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Do you do consulting? Can you build me something?
-                            </button>
-                          </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <p>Yes, email me.</p>
-                            <a href="mailto:hello@awadomar.com">
-                              hello@awadomar.com
-                          <i class="fas fa-arrow-right custom-icon"></i>
-                          </a>
-                          </div>
-                        </div>
-                      </div>
-
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
-                          <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                              Can I have the code for this website?
-                            </button>
-                          </h2>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <p>Absolutely, you can <u><a href="https://github.com/awadom/awadomar.com" target="_blank">find it on Github.</a></u></p>
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header" id="headingFive">
-                          <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                              How do I support Omar?
-                            </button>
-                          </h2>
-                        </div>
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                          <div class="card-body">
-                            <p>Connect with me on socials or collaborate with me on a project!</p>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-           	 </div><!-- col -->
-        	</div><!-- row -->
-        </div><!-- container -->
-    </section>
-
-
-     <section class="contact pt-0" id="contact">
-      <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-8 col-12">
-                <h1 class="my-4 pt-4 pt-lg-0 section-title" data-aos="fade-up">Say hello</h1>
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <p class="contact-intro">
-                        Ready to collaborate on your next data-driven project? Let's connect and explore how we can turn your data into actionable insights.
-                    </p>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <h4 class="contact-email">
-                            <a href="mailto:hello@awadomar.com">hello@awadomar.com</a>
-                        </h4>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone contact-icon"></i>
-                        <h4 class="contact-phone">Available for consultation</h4>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
-                        <h4 class="contact-location">Seattle, WA</h4>
-                    </div>
-                </div>
-                <ul class="social-links mt-4" data-aos="fade-up" data-aos-delay="400">
-                    <li><a href="https://github.com/awadom" class="tooltip"><i class="fab fa-github"></i><span class="tooltiptext">GitHub</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/awadomar" target="_blank" rel="noopener" class="tooltip"><i class="fab fa-linkedin"></i><span class="tooltiptext">LinkedIn</span></a></li>
-                    <li><a href="https://x.com/DatarangOmar" class="tooltip"><i class="bi bi-twitter-x"></i><span class="tooltiptext">Twitter</span></a></li>
-                    <li><a href="mailto:hello@awadomar.com" class="tooltip"><i class="bi bi-envelope"></i><span class="tooltiptext">Email</span></a></li>
-                </ul>
-            </div>
-            <div class="col-lg-6 col-md-4 col-12 d-flex align-items-center justify-content-center">
-                <div class="contact-animation" data-aos="fade-left" data-aos-delay="600">
-                    <div class="tech-matrix">
-                        <div class="matrix-row">
-                            <i class="fas fa-chart-line"></i>
-                            <i class="fas fa-database"></i>
-                            <i class="fas fa-code"></i>
-                            <i class="fas fa-brain"></i>
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <div class="matrix-row">
-                            <i class="fas fa-chart-bar"></i>
-                            <i class="fas fa-server"></i>
-                            <i class="fas fa-laptop-code"></i>
-                            <i class="fas fa-robot"></i>
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <div class="matrix-row">
-                            <i class="fas fa-analytics"></i>
-                            <i class="fas fa-sitemap"></i>
-                            <i class="fas fa-terminal"></i>
-                            <i class="fas fa-network-wired"></i>
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                        <div class="matrix-row">
-                            <i class="fas fa-chart-pie"></i>
-                            <i class="fas fa-hdd"></i>
-                            <i class="fas fa-bug"></i>
-                            <i class="fas fa-project-diagram"></i>
-                            <i class="fas fa-filter"></i>
-                        </div>
-                        <div class="matrix-row">
-                            <i class="fas fa-chart-area"></i>
-                            <i class="fas fa-table"></i>
-                            <i class="fas fa-search"></i>
-                            <i class="fas fa-layer-group"></i>
-                            <i class="fas fa-tools"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="hero-console" aria-label="A sample of systems Omar has built">
+        <div class="console-bar">
+          <span></span><span></span><span></span>
+          <small>omar@builder ~ systems</small>
+        </div>
+        <div class="console-body">
+          <p><span class="prompt">›</span> shipping_now</p>
+          <div class="console-line">
+            <span class="status live">LIVE</span>
+            <span>LOMAevents</span>
+            <small>Flutter · Firebase · AI</small>
+          </div>
+          <div class="console-line">
+            <span class="status live">LIVE</span>
+            <span>LOMAinsights</span>
+            <small>Healthcare · Analytics · Gemini</small>
+          </div>
+          <p><span class="prompt">›</span> home_lab --status</p>
+          <div class="console-line">
+            <span class="status local">LOCAL</span>
+            <span>Voice-controlled home AI</span>
+            <small>LLM · Whisper · Home Assistant</small>
+          </div>
+          <div class="console-line">
+            <span class="status local">LOCAL</span>
+            <span>Private cloud stack</span>
+            <small>Jellyfin · Security · Actual</small>
+          </div>
+          <p><span class="prompt">›</span> experiments --active</p>
+          <div class="console-line">
+            <span class="status build">BUILD</span>
+            <span>Cobblemon Bedrock port</span>
+            <small>Java → Bedrock</small>
+          </div>
+          <span class="cursor" aria-hidden="true"></span>
         </div>
       </div>
     </section>
-<!-- COPYRIGHT -->
-     <p class="copyright-text mt-5 pt-3 align-items-center text-center">Copyright &copy; 2023 Omar Awad</p>
 
-<!-- RESUME MODAL -->
-<div class="modal fade" id="resumeModal" tabindex="-1" role="dialog" aria-labelledby="resumeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="resumeModalLabel">Omar's Resume</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+    <section class="signal-strip" aria-label="Areas of expertise">
+      <span>Product engineering</span>
+      <span>Applied AI</span>
+      <span>Data platforms</span>
+      <span>Automation</span>
+      <span>Technical leadership</span>
+      <span>Founder mindset</span>
+    </section>
+
+    <section class="section selected-work" id="work">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>Products in the real world.</h2>
+        </div>
+        <p>Not concepts or course projects—systems designed, built, deployed, and continuously improved.</p>
       </div>
-      <div class="modal-body p-0">
-        <embed src="documents/Omar_s_Resume_2025.pdf" type="application/pdf" width="100%" height="600px" />
-        <div class="text-center p-3">
-          <a href="documents/Omar_s_Resume_2025.pdf" download="Omar_Awad_Resume_2025.pdf" class="btn btn-primary">
-            <i class="fas fa-download"></i> Download PDF
-          </a>
+
+      <article class="case-study case-study-loma">
+        <div class="case-copy">
+          <div class="case-meta">
+            <span class="case-number">01</span>
+            <span class="badge badge-live">Live product</span>
+          </div>
+          <p class="case-kicker">Founder & product engineer</p>
+          <h3>LOMAevents</h3>
+          <p class="case-summary">
+            An end-to-end event planning platform that turns a prompt into a coordinated event:
+            vendors, tasks, budgets, itineraries, invitations, RSVPs, recipes, and guest analytics.
+          </p>
+          <ul class="outcome-list">
+            <li>Shipped a production Flutter app to the Apple App Store</li>
+            <li>Built AI-assisted creation with structured guardrails and telemetry</li>
+            <li>Connected Firebase, Google Places, Yelp, RevenueCat, email, and deep links</li>
+            <li>Created the public acquisition, invite, RSVP, and analytics surfaces</li>
+          </ul>
+          <div class="tag-list">
+            <span>Flutter</span><span>Firebase</span><span>Riverpod</span><span>AI systems</span><span>Growth analytics</span>
+          </div>
+          <div class="case-links">
+            <a href="https://apps.apple.com/us/app/lomaevents-ai-event-planner/id6737415574" target="_blank" rel="noopener">App Store <i class="fas fa-external-link-alt"></i></a>
+            <a href="https://lomaevents.com" target="_blank" rel="noopener">lomaevents.com <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="case-visual phone-stage">
+          <div class="phone-frame">
+            <img src="images/projects/lomaevents-ai-create.webp" alt="LOMAevents AI Create screen">
+          </div>
+          <div class="visual-note note-one">Natural language → structured event</div>
+          <div class="visual-note note-two">App Store production release</div>
+        </div>
+      </article>
+
+      <article class="case-study case-study-insights">
+        <div class="case-copy">
+          <div class="case-meta">
+            <span class="case-number">02</span>
+            <span class="badge badge-live">Live company</span>
+          </div>
+          <p class="case-kicker">Founder & platform architect</p>
+          <h3>LOMAinsights</h3>
+          <p class="case-summary">
+            Healthcare operating intelligence across finance, workforce, clinical quality,
+            access, revenue cycle, incentives, and patient experience.
+          </p>
+          <ul class="outcome-list">
+            <li>Unified cross-domain operating metrics into an executive decision layer</li>
+            <li>Built AI diagnostics, causal narratives, and a prioritized action worklist</li>
+            <li>Designed ingestion paths for CSV, XLSX, and FHIR R4 data</li>
+            <li>Created delivery and health-plan scenarios with 24 months of synthetic data</li>
+          </ul>
+          <div class="tag-list">
+            <span>Healthcare analytics</span><span>FHIR</span><span>Python</span><span>Gemini</span><span>Firebase</span>
+          </div>
+          <div class="case-links">
+            <a href="https://lomainsights.com" target="_blank" rel="noopener">Explore LOMAinsights <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="case-visual dashboard-stage">
+          <img src="images/projects/lomainsights-dashboard.png" alt="LOMAinsights healthcare operating intelligence dashboard">
+          <div class="dashboard-caption">
+            <span>One operating picture</span>
+            <small>Finance · Workforce · Quality · Access · Experience</small>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section systems" id="systems">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Systems portfolio</p>
+          <h2>I build across the whole stack.</h2>
+        </div>
+        <p>The common thread is ownership: understanding the problem, designing the system, and making it work end to end.</p>
+      </div>
+
+      <div class="systems-grid">
+        <article class="system-card featured-system">
+          <div class="system-icon"><i class="fas fa-home"></i></div>
+          <p class="system-type">Local AI & automation</p>
+          <h3>A house that can answer back</h3>
+          <p>A completely private voice assistant that uses a local LLM to control lights and answer questions about the home through Home Assistant.</p>
+          <div class="system-flow">
+            <span>Voice</span><i class="fas fa-arrow-right"></i><span>Whisper</span><i class="fas fa-arrow-right"></i><span>Local LLM</span><i class="fas fa-arrow-right"></i><span>Home Assistant</span>
+          </div>
+        </article>
+
+        <article class="system-card">
+          <div class="system-icon"><i class="fas fa-solar-panel"></i></div>
+          <p class="system-type">Applied AI</p>
+          <h3>Home systems analysis</h3>
+          <p>AI-assisted lawn care, solar, and HVAC analysis designed to turn messy household conditions into practical recommendations.</p>
+          <div class="tag-list compact"><span>Computer vision</span><span>Decision support</span></div>
+        </article>
+
+        <article class="system-card">
+          <div class="system-icon"><i class="fas fa-chart-line"></i></div>
+          <p class="system-type">Quantitative systems</p>
+          <h3>Automated trading research</h3>
+          <p>A research and execution stack that paper trades through Alpaca and has been tested for live execution through the Schwab API.</p>
+          <div class="tag-list compact"><span>Python</span><span>Backtesting</span><span>Broker APIs</span></div>
+        </article>
+
+        <article class="system-card">
+          <div class="system-icon"><i class="fas fa-server"></i></div>
+          <p class="system-type">Private infrastructure</p>
+          <h3>Self-hosted home cloud</h3>
+          <p>Jellyfin media, camera-based motion security, and a customized Actual Budget deployment—using existing hardware and keeping data local.</p>
+          <div class="tag-list compact"><span>Jellyfin</span><span>Containers</span><span>Local-first</span></div>
+        </article>
+
+        <article class="system-card">
+          <div class="system-icon"><i class="fas fa-tools"></i></div>
+          <p class="system-type">Product customization</p>
+          <h3>Actual Budget updater</h3>
+          <p>A locally hosted Actual server with a custom client-side update control, turning a maintenance task into a safe one-click workflow.</p>
+          <div class="tag-list compact"><span>Open source</span><span>UX</span><span>Operations</span></div>
+        </article>
+
+        <article class="system-card">
+          <div class="system-icon"><i class="fas fa-cubes"></i></div>
+          <p class="system-type">Family experiment</p>
+          <h3>Cobblemon for Bedrock</h3>
+          <p>A full port of the Java-only Cobblemon experience to Minecraft Bedrock for a private family server—part reverse engineering, part game design.</p>
+          <div class="tag-list compact"><span>Minecraft</span><span>Bedrock</span><span>Game systems</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section operating-model">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">How I work</p>
+          <h2>Strategy that survives contact with reality.</h2>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+      <div class="model-grid">
+        <article><span>01</span><h3>Find the actual constraint</h3><p>I translate broad ambitions into a problem that can be measured, designed, and shipped.</p></article>
+        <article><span>02</span><h3>Build the smallest real system</h3><p>I prefer working software, live data, and real users over decks that postpone the hard questions.</p></article>
+        <article><span>03</span><h3>Instrument and improve</h3><p>I add feedback loops, analytics, reliability, and operational tooling so the product can mature.</p></article>
+        <article><span>04</span><h3>Make complexity usable</h3><p>The final interface should feel simple even when the architecture behind it is not.</p></article>
+      </div>
+    </section>
 
-<!-- SCRIPTS -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-     <script src="js/custom.js"></script>
+    <section class="section about" id="about">
+      <div class="about-copy">
+        <p class="eyebrow">About</p>
+        <h2>Technical enough to build it. Strategic enough to know why.</h2>
+        <p>
+          I’m a data and technology leader with more than fifteen years of experience turning
+          complex operations into systems people can understand and use. My work spans enterprise
+          analytics, product development, applied AI, and technical leadership.
+        </p>
+        <p>
+          The projects here are how I think: curious, hands-on, and unwilling to stop at a prototype.
+          Whether I’m launching a company or improving something in my own home, I care about the
+          complete loop from idea to reliable outcome.
+        </p>
+        <div class="about-links">
+          <a href="https://www.linkedin.com/in/awadomar" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/awadom" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://x.com/DatarangOmar" target="_blank" rel="noopener">X</a>
+        </div>
+      </div>
+      <div class="about-panel">
+        <div class="profile-row">
+          <img src="images/omar.png" alt="Omar Awad">
+          <div><strong>Omar Awad</strong><span>Reston, Virginia</span></div>
+        </div>
+        <div class="availability">
+          <span class="availability-dot"></span>
+          Open to ambitious products, advisory work, and collaborations
+        </div>
+        <a class="button button-primary button-full" href="mailto:hello@awadomar.com">hello@awadomar.com</a>
+      </div>
+    </section>
 
+    <section class="contact-cta">
+      <p class="eyebrow">Have a difficult problem?</p>
+      <h2>Let’s make it concrete.</h2>
+      <a class="button button-light" href="mailto:hello@awadomar.com">Start a conversation <i class="fas fa-arrow-right"></i></a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Omar Awad</span>
+    <span>Built to show the work, not just list the skills.</span>
+  </footer>
+
+  <script src="js/custom.js"></script>
 </body>
 </html>
