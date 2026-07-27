@@ -67,41 +67,53 @@
         </div>
       </div>
 
-      <div class="hero-console" aria-label="A sample of systems Omar has built">
+      <div class="hero-console" aria-label="Ask Omar's portfolio assistant about his work">
         <div class="console-bar">
           <span></span><span></span><span></span>
-          <small>omar@builder ~ systems</small>
+          <small>omar@builder ~ ask-me-anything</small>
         </div>
         <div class="console-body">
-          <p><span class="prompt">›</span> shipping_now</p>
-          <div class="console-line">
-            <span class="status live">LIVE</span>
-            <span>LOMAevents</span>
-            <small>Flutter · Firebase · AI</small>
+          <div class="console-systems" aria-label="Featured systems">
+            <div class="console-line">
+              <span class="status live">LIVE</span>
+              <span>LOMAevents</span>
+              <small>Flutter · Firebase · AI</small>
+            </div>
+            <div class="console-line">
+              <span class="status live">LIVE</span>
+              <span>LOMAinsights</span>
+              <small>Healthcare · Analytics · Gemini</small>
+            </div>
+            <div class="console-line">
+              <span class="status local">LOCAL</span>
+              <span>Home AI + private cloud</span>
+              <small>LLM · Home Assistant · Jellyfin</small>
+            </div>
           </div>
-          <div class="console-line">
-            <span class="status live">LIVE</span>
-            <span>LOMAinsights</span>
-            <small>Healthcare · Analytics · Gemini</small>
+
+          <div class="chat-shell">
+            <p class="chat-command"><span class="prompt">›</span> ask_omar --interactive</p>
+            <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Conversation">
+              <div class="chat-message assistant">
+                <span class="chat-author">portfolio.ai</span>
+                <p>Hi—ask me about Omar’s products, technical work, leadership experience, or the kinds of problems he likes to solve.</p>
+              </div>
+            </div>
+            <div class="chat-suggestions" aria-label="Suggested questions">
+              <button type="button" data-question="What did Omar build for LOMAevents?">LOMAevents</button>
+              <button type="button" data-question="How does Omar use AI in his projects?">Applied AI</button>
+              <button type="button" data-question="What is Omar's technical background?">Background</button>
+            </div>
+            <form class="chat-form" id="chat-form">
+              <label class="sr-only" for="chat-input">Ask a question about Omar</label>
+              <span class="prompt" aria-hidden="true">›</span>
+              <textarea id="chat-input" name="message" rows="1" maxlength="800" placeholder="Ask about Omar or his projects…" required></textarea>
+              <button type="submit" aria-label="Send question">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+              </button>
+            </form>
+            <p class="chat-note">AI answers are grounded in this portfolio and may occasionally be imperfect.</p>
           </div>
-          <p><span class="prompt">›</span> home_lab --status</p>
-          <div class="console-line">
-            <span class="status local">LOCAL</span>
-            <span>Voice-controlled home AI</span>
-            <small>LLM · Whisper · Home Assistant</small>
-          </div>
-          <div class="console-line">
-            <span class="status local">LOCAL</span>
-            <span>Private cloud stack</span>
-            <small>Jellyfin · Security · Actual</small>
-          </div>
-          <p><span class="prompt">›</span> experiments --active</p>
-          <div class="console-line">
-            <span class="status build">BUILD</span>
-            <span>Cobblemon Bedrock port</span>
-            <small>Java → Bedrock</small>
-          </div>
-          <span class="cursor" aria-hidden="true"></span>
         </div>
       </div>
     </section>
