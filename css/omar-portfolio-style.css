@@ -146,6 +146,50 @@ img {
   padding: 100px 24px 80px;
 }
 
+.hero-identity {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.hero-identity strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 17px;
+}
+
+.hero-identity .eyebrow {
+  margin-bottom: 0;
+}
+
+.hero-portrait {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+}
+
+.hero-portrait::after {
+  position: absolute;
+  inset: 6px -6px -6px 6px;
+  z-index: -1;
+  border-radius: 19px;
+  background: var(--accent);
+  content: "";
+  transform: rotate(4deg);
+}
+
+.hero-portrait img {
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--paper);
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: 0 10px 26px rgba(20, 24, 32, 0.14);
+}
+
 .eyebrow {
   margin: 0 0 18px;
   color: var(--accent-dark);
