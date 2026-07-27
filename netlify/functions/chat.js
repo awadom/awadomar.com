@@ -188,11 +188,7 @@ exports.handler = async function handler(event) {
     if (!response.ok) {
       const errorBody = await response.text();
       console.error("Gemini request failed", response.status, errorBody);
-      return jsonResponse(502, {
-        error: "The portfolio assistant could not answer right now.",
-        code: `GEMINI_${response.status}`,
-        model
-      });
+      return jsonResponse(502, { error: "The portfolio assistant could not answer right now." });
     }
 
     const data = await response.json();
