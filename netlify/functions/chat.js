@@ -1,6 +1,7 @@
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_REQUESTS = 12;
 const requestsByIp = new Map();
+let cachedModel;
 
 const PORTFOLIO_CONTEXT = `
 You are the portfolio assistant for Omar Awad. Answer questions about Omar and his work using only the facts below.
@@ -82,6 +83,46 @@ function jsonResponse(statusCode, body) {
   };
 }
 
+async function resolveModel(apiKey) {
+  if (cachedModel) return cachedModel;
+
+  const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models", {
+    headers: { "x-goog-api-key": apiKey }
+  });
+
+  if (!response.ok) {
+    throw new Error(`Unable to list Gemini models (${response.status}).`);
+  }
+
+  const data = await response.json();
+  const configuredModel = process.env.GEMINI_MODEL?.replace(/^models\//, "");
+  const compatibleModels = (data.models || [])
+    .filter((model) => model.supportedGenerationMethods?.includes("generateContent"))
+    .map((model) => model.name.replace(/^models\//, ""));
+
+  if (configuredModel && compatibleModels.includes(configuredModel)) {
+    cachedModel = configuredModel;
+    return cachedModel;
+  }
+
+  const preferredNames = [
+    "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-1.5-flash"
+  ];
+
+  cachedModel =
+    preferredNames.find((name) => compatibleModels.includes(name)) ||
+    compatibleModels.find((name) => name.includes("flash") && !name.includes("image")) ||
+    compatibleModels[0];
+
+  if (!cachedModel) {
+    throw new Error("No Gemini model supporting generateContent is available.");
+  }
+
+  return cachedModel;
+}
+
 exports.handler = async function handler(event) {
   if (event.httpMethod !== "POST") {
     return jsonResponse(405, { error: "Method not allowed." });
@@ -119,10 +160,9 @@ exports.handler = async function handler(event) {
         }))
     : [];
 
-  const model = process.env.GEMINI_MODEL || "gemini-2.5-flash";
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
-
   try {
+    const model = await resolveModel(apiKey);
+    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
     const response = await fetch(endpoint, {
       method: "POST",
       headers: {

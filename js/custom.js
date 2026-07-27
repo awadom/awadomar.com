@@ -6,7 +6,7 @@
   const chatForm = document.getElementById("chat-form");
   const chatInput = document.getElementById("chat-input");
   const chatLog = document.getElementById("chat-log");
-  const suggestionButtons = document.querySelectorAll("[data-question]");
+  const heroConsole = document.querySelector(".hero-console");
   const conversation = [];
 
   if (year) {
@@ -31,12 +31,10 @@
     const message = document.createElement("div");
     message.className = `chat-message ${role}${loading ? " is-loading" : ""}`;
 
-    if (role === "assistant") {
-      const author = document.createElement("span");
-      author.className = "chat-author";
-      author.textContent = "portfolio.ai";
-      message.appendChild(author);
-    }
+    const author = document.createElement("span");
+    author.className = "chat-author";
+    author.textContent = role === "assistant" ? "portfolio.ai" : "visitor";
+    message.appendChild(author);
 
     const content = document.createElement("p");
     content.textContent = text;
@@ -48,10 +46,6 @@
 
   const setChatBusy = (busy) => {
     if (chatInput) chatInput.disabled = busy;
-    if (chatForm) chatForm.querySelector("button").disabled = busy;
-    suggestionButtons.forEach((button) => {
-      button.disabled = busy;
-    });
   };
 
   const submitQuestion = async (question) => {
@@ -61,7 +55,6 @@
     addMessage("user", cleanQuestion);
     conversation.push({ role: "user", text: cleanQuestion });
     chatInput.value = "";
-    chatInput.style.height = "auto";
     setChatBusy(true);
 
     const loadingMessage = addMessage("assistant", "Thinking", true);
@@ -101,22 +94,8 @@
       submitQuestion(chatInput.value);
     });
 
-    chatInput.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" && !event.shiftKey) {
-        event.preventDefault();
-        chatForm.requestSubmit();
-      }
-    });
-
-    chatInput.addEventListener("input", () => {
-      chatInput.style.height = "auto";
-      chatInput.style.height = `${Math.min(chatInput.scrollHeight, 90)}px`;
+    heroConsole?.addEventListener("click", (event) => {
+      if (!event.target.closest("a, button")) chatInput.focus();
     });
   }
-
-  suggestionButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      submitQuestion(button.dataset.question || "");
-    });
-  });
 })();

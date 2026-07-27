@@ -96,23 +96,15 @@
             <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Conversation">
               <div class="chat-message assistant">
                 <span class="chat-author">portfolio.ai</span>
-                <p>Hi—ask me about Omar’s products, technical work, leadership experience, or the kinds of problems he likes to solve.</p>
+                <p>ready — click anywhere in this terminal and ask about Omar or his projects</p>
               </div>
-            </div>
-            <div class="chat-suggestions" aria-label="Suggested questions">
-              <button type="button" data-question="What did Omar build for LOMAevents?">LOMAevents</button>
-              <button type="button" data-question="How does Omar use AI in his projects?">Applied AI</button>
-              <button type="button" data-question="What is Omar's technical background?">Background</button>
             </div>
             <form class="chat-form" id="chat-form">
               <label class="sr-only" for="chat-input">Ask a question about Omar</label>
               <span class="prompt" aria-hidden="true">›</span>
-              <textarea id="chat-input" name="message" rows="1" maxlength="800" placeholder="Ask about Omar or his projects…" required></textarea>
-              <button type="submit" aria-label="Send question">
-                <i class="fas fa-arrow-up" aria-hidden="true"></i>
-              </button>
+              <input id="chat-input" name="message" maxlength="800" autocomplete="off" placeholder="type a question and press enter" required>
+              <span class="terminal-cursor" aria-hidden="true"></span>
             </form>
-            <p class="chat-note">AI answers are grounded in this portfolio and may occasionally be imperfect.</p>
           </div>
         </div>
       </div>
