@@ -35,8 +35,9 @@ LOMAINSIGHTS
 - Public link: https://lomainsights.com.
 
 OTHER SYSTEMS
-- Omar built a private local voice assistant using Whisper, a local LLM, and Home Assistant. It can control lights
-  and answer questions about his home without sending the core intelligence to a hosted model.
+- Omar built a private local household intelligence layer using voice input, Whisper, a local LLM, Home Assistant,
+  and custom automations. It manages cameras, lights, home security, a media server, a shared shopping list,
+  and food planning while keeping the core intelligence local.
 - His self-hosted home infrastructure includes Jellyfin, camera-based motion security using existing devices,
   and a customized Actual Budget server with a one-click client update workflow.
 - He has explored AI-assisted lawn care, solar, and HVAC analysis.
