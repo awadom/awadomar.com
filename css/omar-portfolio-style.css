@@ -557,16 +557,24 @@ img {
 }
 
 .signal-strip {
-  display: flex;
-  gap: 0;
   overflow: hidden;
   color: #fff;
   background: var(--ink);
 }
 
+.signal-track {
+  display: flex;
+  width: max-content;
+  animation: signal-scroll 28s linear infinite;
+}
+
+.signal-group {
+  display: flex;
+  flex-shrink: 0;
+}
+
 .signal-strip span {
-  flex: 1;
-  min-width: max-content;
+  width: 220px;
   padding: 18px 24px;
   border-right: 1px solid rgba(255, 255, 255, 0.14);
   font-size: 11px;
@@ -574,6 +582,12 @@ img {
   letter-spacing: 0.1em;
   text-align: center;
   text-transform: uppercase;
+}
+
+@keyframes signal-scroll {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .section {
@@ -1076,6 +1090,10 @@ footer {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .signal-track:hover {
+    animation-play-state: paused;
+  }
+
   .button:hover {
     transform: translateY(-2px);
   }
@@ -1208,7 +1226,7 @@ footer {
   }
 
   .signal-strip {
-    overflow-x: auto;
+    overflow: hidden;
   }
 
   .section {
@@ -1281,5 +1299,18 @@ footer {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .signal-strip {
+    overflow-x: auto;
+  }
+
+  .signal-track {
+    animation: none !important;
+    transform: none;
+  }
+
+  .signal-group[aria-hidden="true"] {
+    display: none;
   }
 }
