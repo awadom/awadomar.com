@@ -566,6 +566,9 @@ img {
   display: flex;
   width: max-content;
   animation: signal-scroll 28s linear infinite;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .signal-group {
@@ -585,8 +588,12 @@ img {
 }
 
 @keyframes signal-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -1302,15 +1309,10 @@ footer {
   }
 
   .signal-strip {
-    overflow-x: auto;
+    overflow: hidden;
   }
 
   .signal-track {
-    animation: none !important;
-    transform: none;
-  }
-
-  .signal-group[aria-hidden="true"] {
-    display: none;
+    animation: signal-scroll 60s linear infinite !important;
   }
 }
