@@ -468,7 +468,7 @@ img {
 
 .chat-form {
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto auto 1fr auto;
   gap: 10px;
   align-items: center;
   margin-top: 20px;
@@ -515,7 +515,7 @@ img {
   border-radius: 8px;
   background: var(--lime);
   cursor: pointer;
-  opacity: 0.35;
+  opacity: 0;
   transform: scale(1);
   pointer-events: none;
   transition: opacity 160ms ease, transform 160ms var(--ease-out);
