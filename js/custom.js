@@ -46,6 +46,7 @@
 
   const setChatBusy = (busy) => {
     if (chatInput) chatInput.disabled = busy;
+    if (chatForm) chatForm.querySelector("button").disabled = busy;
   };
 
   const submitQuestion = async (question) => {
@@ -55,6 +56,7 @@
     addMessage("user", cleanQuestion);
     conversation.push({ role: "user", text: cleanQuestion });
     chatInput.value = "";
+    chatForm.classList.remove("has-value");
     setChatBusy(true);
 
     const loadingMessage = addMessage("assistant", "Thinking", true);
@@ -92,6 +94,10 @@
     chatForm.addEventListener("submit", (event) => {
       event.preventDefault();
       submitQuestion(chatInput.value);
+    });
+
+    chatInput.addEventListener("input", () => {
+      chatForm.classList.toggle("has-value", chatInput.value.trim().length > 0);
     });
 
     heroConsole?.addEventListener("click", (event) => {
