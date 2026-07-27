@@ -86,7 +86,7 @@ function jsonResponse(statusCode, body) {
 async function resolveModel(apiKey) {
   if (cachedModel) return cachedModel;
 
-  const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models", {
+  const response = await fetch("https://generativelanguage.googleapis.com/v1/models", {
     headers: { "x-goog-api-key": apiKey }
   });
 
@@ -162,7 +162,7 @@ exports.handler = async function handler(event) {
 
   try {
     const model = await resolveModel(apiKey);
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
+    const endpoint = `https://generativelanguage.googleapis.com/v1/models/${encodeURIComponent(model)}:generateContent`;
     const response = await fetch(endpoint, {
       method: "POST",
       headers: {
