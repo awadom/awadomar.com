@@ -799,16 +799,19 @@ img {
 }
 
 .dashboard-stage {
-  padding: 34px 0 0 34px;
-  border-radius: 26px 0 0 26px;
+  padding: 28px 28px 0;
+  overflow: hidden;
+  border-radius: 26px;
   background: linear-gradient(145deg, #20af9c, #0d615c);
 }
 
 .dashboard-stage > img {
-  width: 126%;
-  max-width: none;
-  border-radius: 16px 0 0 0;
-  box-shadow: -18px 28px 70px rgba(0, 0, 0, 0.28);
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: left top;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
 }
 
 .dashboard-caption {
@@ -1236,11 +1239,7 @@ footer {
   }
 
   .dashboard-stage {
-    padding: 20px 0 0 20px;
-  }
-
-  .dashboard-stage > img {
-    width: 150%;
+    padding: 16px 16px 0;
   }
 
   .systems-grid,
