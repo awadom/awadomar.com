@@ -106,6 +106,9 @@ async function resolveModel(apiKey) {
   }
 
   const preferredNames = [
+    "gemini-3.6-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-3-flash-preview",
     "gemini-2.5-flash",
     "gemini-2.0-flash",
     "gemini-1.5-flash"
@@ -155,29 +158,30 @@ exports.handler = async function handler(event) {
         .slice(-6)
         .filter((item) => item && ["user", "assistant"].includes(item.role) && typeof item.text === "string")
         .map((item) => ({
-          role: item.role === "assistant" ? "model" : "user",
-          parts: [{ text: item.text.slice(0, 1200) }]
+          role: item.role,
+          content: item.text.slice(0, 1200)
         }))
     : [];
 
   try {
     const model = await resolveModel(apiKey);
-    const endpoint = `https://generativelanguage.googleapis.com/v1/models/${encodeURIComponent(model)}:generateContent`;
+    const endpoint = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
     const response = await fetch(endpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-goog-api-key": apiKey
+        "Authorization": `Bearer ${apiKey}`
       },
       body: JSON.stringify({
-        systemInstruction: {
-          parts: [{ text: PORTFOLIO_CONTEXT }]
-        },
-        contents: [...history, { role: "user", parts: [{ text: message }] }],
-        generationConfig: {
-          temperature: 0.35,
-          maxOutputTokens: 420
-        }
+        model,
+        messages: [
+          { role: "system", content: PORTFOLIO_CONTEXT },
+          ...history,
+          { role: "user", content: message }
+        ],
+        reasoning_effort: "low",
+        temperature: 0.35,
+        max_tokens: 420
       })
     });
 
@@ -192,10 +196,7 @@ exports.handler = async function handler(event) {
     }
 
     const data = await response.json();
-    const answer = data.candidates?.[0]?.content?.parts
-      ?.map((part) => part.text || "")
-      .join("")
-      .trim();
+    const answer = data.choices?.[0]?.message?.content?.trim();
 
     if (!answer) {
       return jsonResponse(502, { error: "The portfolio assistant returned an empty response." });
