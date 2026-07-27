@@ -143,7 +143,7 @@ img {
   max-width: var(--max-width);
   min-height: calc(100vh - 73px);
   margin: 0 auto;
-  padding: 100px 24px 80px;
+  padding: 48px 24px 72px;
 }
 
 .hero-identity {
@@ -963,7 +963,7 @@ footer {
 
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 80px;
+    padding-top: 52px;
   }
 
   .hero-console {
@@ -1020,7 +1020,7 @@ footer {
 
   .hero {
     min-height: auto;
-    padding: 70px 18px;
+    padding: 42px 18px 70px;
   }
 
   .hero h1 {
