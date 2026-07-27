@@ -403,6 +403,7 @@ img {
 .chat-shell {
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin-top: auto;
 }
 
@@ -472,6 +473,7 @@ img {
   grid-template-columns: auto auto 1fr auto;
   gap: 10px;
   align-items: center;
+  width: 100%;
   margin-top: 20px;
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -479,6 +481,7 @@ img {
 
 .chat-form input {
   width: 100%;
+  min-width: 0;
   padding: 0;
   color: #e3e8ef;
   border: 0;
@@ -519,6 +522,7 @@ img {
   opacity: 0;
   transform: scale(1);
   pointer-events: none;
+  justify-self: end;
   transition: opacity 160ms ease, transform 160ms var(--ease-out);
 }
 
