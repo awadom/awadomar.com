@@ -27,7 +27,10 @@
       <a href="#systems">Systems</a>
       <a href="#about">About</a>
     </nav>
-    <a class="header-cta" href="mailto:hello@awadomar.com">Let’s build something</a>
+    <a class="header-cta" href="mailto:hello@awadomar.com">
+      <span class="header-cta-full">Let’s build something</span>
+      <span class="header-cta-short">Email me</span>
+    </a>
   </header>
 
   <main id="top">
@@ -105,12 +108,29 @@
           </div>
 
           <div class="chat-shell">
+            <button
+              class="chat-discovery"
+              id="chat-discovery"
+              type="button"
+              data-question="What has Omar shipped?"
+            >
+              <span>psst:</span>
+              this terminal talks back. Ask what I’ve shipped
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </button>
             <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-label="Conversation"></div>
             <form class="chat-form" id="chat-form">
               <label class="sr-only" for="chat-input">Ask a question about Omar</label>
               <span class="prompt" aria-hidden="true">›</span>
               <span class="terminal-cursor" aria-hidden="true"></span>
-              <input id="chat-input" name="message" maxlength="800" autocomplete="off" required>
+              <input
+                id="chat-input"
+                name="message"
+                maxlength="800"
+                autocomplete="off"
+                placeholder="Ask me about Omar’s work"
+                required
+              >
               <button type="submit" aria-label="Send question">
                 <i class="fas fa-arrow-up" aria-hidden="true"></i>
               </button>

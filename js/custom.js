@@ -6,6 +6,7 @@
   const chatForm = document.getElementById("chat-form");
   const chatInput = document.getElementById("chat-input");
   const chatLog = document.getElementById("chat-log");
+  const chatDiscovery = document.getElementById("chat-discovery");
   const heroConsole = document.querySelector(".hero-console");
   const conversation = [];
 
@@ -67,6 +68,7 @@
 
     const userMessage = addMessage("user", cleanQuestion);
     conversation.push({ role: "user", text: cleanQuestion });
+    if (chatDiscovery) chatDiscovery.hidden = true;
     chatInput.value = "";
     chatForm.classList.remove("has-value");
     setChatBusy(true);
@@ -83,9 +85,14 @@
         })
       });
 
-      const payload = await response.json();
+      const isJson = response.headers.get("content-type")?.includes("application/json");
+      const payload = isJson ? await response.json() : null;
       if (!response.ok) {
-        throw new Error(payload.error || "The portfolio assistant is unavailable.");
+        throw new Error(payload?.error || "The portfolio assistant is unavailable.");
+      }
+
+      if (typeof payload?.answer !== "string") {
+        throw new Error("The portfolio assistant returned an invalid response.");
       }
 
       const answer = payload.answer.trim();
@@ -111,6 +118,10 @@
 
     chatInput.addEventListener("input", () => {
       chatForm.classList.toggle("has-value", chatInput.value.trim().length > 0);
+    });
+
+    chatDiscovery?.addEventListener("click", () => {
+      submitQuestion(chatDiscovery.dataset.question);
     });
 
     heroConsole?.addEventListener("click", (event) => {
